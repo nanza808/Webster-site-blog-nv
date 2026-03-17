@@ -1,0 +1,339 @@
+:root {
+  --webster-blue: #024890;
+  --webster-blue-hover: #012f5e;
+  --webster-gold: #f5b706;
+  --lochmara: #0077cc;
+  --tia-maria: #d44511;
+  --gallery: #ffffff;
+  --text: #1f1f1f;
+  --border: #d8d8d8;
+  --surface: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Franklin Gothic Book", "Franklin Gothic", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--text);
+  background-color: var(--gallery);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--webster-blue);
+  font-family: "Franklin Gothic Medium", "Franklin Gothic", Arial, sans-serif;
+  margin: 10px 0 8px;
+}
+
+h1 {
+  line-height: 1.1;
+  font-size: 40px;
+}
+
+h2 {
+  border-bottom: 3px solid var(--webster-gold);
+  padding-bottom: 6px;
+  margin-top: 0;
+  font-size: 28px;
+}
+
+a {
+  color: var(--webster-blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--webster-blue-hover);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--webster-gold);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.full-width-rule {
+  border: 0;
+  border-top: none;
+  margin: 0;
+}
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 4px solid var(--webster-gold);
+}
+
+.top-bar {
+  background: #ffffff;
+  border-bottom: none;
+  font-size: 14px;
+}
+
+.top-links {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.top-links a {
+  color: var(--webster-blue);
+  font-weight: 600;
+}
+
+.header-main {
+  position: relative;
+  padding: 24px 0 18px;
+}
+
+.brand {
+  display: grid;
+  padding-top: 12px;
+  grid-template-columns: 120px 1fr 120px;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.brand img {
+  width: 110px;
+  height: auto;
+  display: block;
+  justify-self: start;
+}
+
+.brand-text {
+  justify-self: center;
+}
+
+.brand-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-link:hover,
+.brand-link:focus-visible {
+  color: inherit;
+}
+
+.brand-text p {
+  margin: 6px 0 0;
+  font-size: 18px;
+  color: var(--webster-blue-hover);
+}
+
+.brand-spacer {
+  width: 110px;
+  justify-self: end;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav {
+  position: absolute;
+  top: 48px;
+  right: max(8px, calc((100% - 1100px) / 2 + 8px));
+}
+
+nav a {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: var(--webster-blue);
+  color: #ffffff;
+  outline: none;
+}
+
+nav a.active {
+  background-color: var(--webster-blue);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+main {
+  flex: 1;
+  background: var(--surface);
+}
+
+.hero-section {
+  background: var(--gallery);
+  border-bottom: none;
+  padding: 48px 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  align-items: center;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+
+.feature-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 20px auto 0;
+  display: block;
+  border-radius: 10px;
+}
+
+.page-section {
+  padding: 48px 0;
+  border-bottom: none;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 22px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(2, 72, 144, 0.08);
+}
+
+.card p {
+  margin: 8px 0 0;
+}
+
+.pill-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pill-list a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: var(--gallery);
+  border: 1px solid var(--border);
+  min-height: 40px;
+}
+
+article {
+  margin-bottom: 32px;
+  border-bottom: none;
+  padding-bottom: 28px;
+}
+
+article:last-of-type {
+  border: none;
+  padding-bottom: 0;
+}
+
+
+article header {
+  margin-bottom: 12px;
+}
+
+article h2 {
+  margin-bottom: 8px;
+}
+
+article header p,
+article time {
+  font-family: "Franklin Gothic Medium", "Franklin Gothic", Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--webster-blue);
+}
+
+article time {
+  color: #000000;
+}
+
+footer {
+  background: var(--webster-blue);
+  color: #ffffff;
+  padding: 24px 0;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .brand {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+
+  .brand img {
+    justify-self: center;
+  }
+
+  .brand-spacer {
+    display: none;
+  }
+
+  nav {
+    position: static;
+    margin-top: 8px;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .hero-section,
+  .page-section {
+    padding: 24px 0;
+  }
+}
+
+
+article p {
+  margin-top: 0;
+}
